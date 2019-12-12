@@ -1,0 +1,51 @@
+<div ng-controller="cadastroController as cadastroCtrl" >
+    <div class="alert alert-warning" role="alert" ng-if="cadastroCtrl.msg">{{cadastroctrl.msg}}</div>
+        <form ng-submit="cadastroCtrl.cadastrar()">
+            <div class="form-group">
+                <label>Nickname</label> <input type="texto"  class="form-control"
+                    placeholder="Escolha seu Nickname" required ng-model="cadastroCtrl.dadosCadastro.nickname">
+            </div>
+            <div class="form-group">
+                <label>Senha</label> <input type="password" class="form-control"
+                    placeholder="Escolha sua senha" required ng-model="cadastroCtrl.dadosCadastro.senha">
+            </div>
+            <div class="form-group">
+                <label>Personagem</label> </div>
+            
+            <div ng-controller="PersonagemController as personagemCtrl" ng-init="personagemCtrl.init()">
+            <select name="personagem" id="personagem"
+                class="form-control" required
+                ng-options="personagem as personagem.nome for personagem in personagemCtrl.personagens"
+                ng-model="cadastroCtrl.personagemEscolhido"></select>
+            <div ng-if="cadastroCtrl.personagemEscolhido">
+                <table
+                    class="table table-condensed table-striped table-bordered text-center">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Velocidade</th>
+                            <th>Aceleração</th>
+                            <th>Peso</th>
+                            <th>Manobra</th>
+                            <th>Tração</th>
+                            <th>Turbo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{cadastroCtrl.personagemEscolhido.nome}}</td>
+                            <td>{{cadastroCtrl.personagemEscolhido.velocidade}}</td>
+                            <td>{{cadastroCtrl.personagemEscolhido.aceleracao}}</td>
+                            <td>{{cadastroCtrl.personagemEscolhido.peso}}</td>
+                            <td>{{cadastroCtrl.personagemEscolhido.manobra}}</td>
+                            <td>{{cadastroCtrl.personagemEscolhido.tracao}}</td>
+                            <td>{{cadastroCtrl.personagemEscolhido.turbo}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+            <button type="submit" class="btn btn-success">Cadastrar</button>
+        </form>
+    </div>
+</div>

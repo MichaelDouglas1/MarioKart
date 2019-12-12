@@ -1,0 +1,1 @@
+const mariokart = angular.module("mariokart", ["ngMessages","ngRoute"]);
