@@ -4,19 +4,20 @@ angular.module("mariokart").controller("PersonagemController",
 PersonagemController.$inject = [ '$scope', 'PersonagemService' ];
 
 function PersonagemController($scope, PersonagemService) {
-	var vm = this;
-	vm.service = PersonagemService;
-	vm.personagens = [];
+	var vp = this;
+	vp.service = PersonagemService;
+	vp.personagens = [];
 
-	vm.init = function() {
-		vm.carregarPersonagens();
+	vp.init = function() {
+		vp.carregarPersonagens();
 	};
 
-	vm.carregarPersonagens = function() {
-		vm.service.getPersonagens().success(function(data) {
-			vm.personagens = data;
+	vp.carregarPersonagens = function() {
+		console.log(vp.service);
+		vp.service.getPersonagens().success(function(data) {
+			vp.personagens = data;
 		}).error(function(data, status) {
-			vm.message = "Aconteceu um problema: " + data;
+			vp.message = "Aconteceu um problema: " + data;
 		});
 	};
 }
