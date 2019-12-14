@@ -17,8 +17,6 @@ public class PersonagemDto implements Serializable {
 	private Integer manobra;
 	private Integer tracao;
 	private Integer turbo;
-	
-	
 
 	public Integer getId() {
 		return id;

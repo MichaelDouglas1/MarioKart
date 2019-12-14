@@ -64,7 +64,6 @@ public class JogadorService {
 			throw new NegocioException("A senha deve possuir o tamanho entre 6 ou 8 caracteres!");
 		}
 
-		System.out.println("Criptografada: " + cadastro.getSenha() + " -> " + checarSenha);
 		
 		//if (cadastro.getSenha().length() < 6 || cadastro.getSenha().length() > 8) {
 		//throw new NegocioException("A senha deve possuir o tamanho entre 6 ou 8 caracteres!");
