@@ -25,7 +25,6 @@ function CorridaController($scope, $location ,CorridaService, loginService) {
 	vm.iniciarCorrida = function() {
 		vm.service.iniciarCorrida().success(function(data) {
 			vm.resultado = data;
-			console.log(vm.resultado);
 			vm.checarVitoria();
 			vm.corridaFinalizou = true;
 		}).error(function(data, status) {

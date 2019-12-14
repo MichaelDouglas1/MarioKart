@@ -44,8 +44,6 @@ public class CorridaService {
 
 			Double velocidadeMaximaCarro = obterVelocidadeMaximaCarro(personagemSelecionado).doubleValue();
 
-			System.out.println(personagemSelecionado.getNome());
-
 			for (CorridaDto percurso : configuracaoPista) {
 
 				if (percurso.getTipo().equals("reta")) {
@@ -62,8 +60,6 @@ public class CorridaService {
 			if (maiorVelocidadeAuxPorVolta < melhorPontuacao) {
 				melhorPontuacao = maiorVelocidadeAuxPorVolta;
 				personagem = personagemSelecionado;
-
-				System.out.println(personagemSelecionado.getNome());
 			}
 
 		}
