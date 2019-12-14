@@ -12,17 +12,16 @@ public class PersonagemService {
 
 	@Inject
 	PersonagemParserDTO parser;
-	
+
 	@Inject
 	PersonagemDAO personagemDao;
-
 
 	public List<PersonagemDto> listar() {
 		return parser.toDTO(personagemDao.list());
 	}
-	
-	 public PersonagemDto obter(Integer id) {
-	        return parser.toDTO(personagemDao.findById(id));
-	    }
+
+	public PersonagemDto obter(Integer id) {
+		return parser.toDTO(personagemDao.findById(id));
+	}
 
 }

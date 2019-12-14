@@ -38,10 +38,4 @@ public class ErrorFilter implements ExceptionMapper<Exception> {
 				.status(status.getStatusCode()).build();
 	}
 
-	
-	
-	
-	
-	
-	
 }

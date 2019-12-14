@@ -19,7 +19,7 @@ public class Personagem implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	private Integer id;
-	
+
 	private String nome;
 	private Integer velocidade;
 	private Integer aceleracao;
@@ -28,8 +28,6 @@ public class Personagem implements Serializable {
 	private Integer tracao;
 	private Integer turbo;
 
-	
-	
 	public Integer getId() {
 		return id;
 	}

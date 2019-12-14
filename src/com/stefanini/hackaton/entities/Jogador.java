@@ -12,12 +12,11 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name = "jogador")
-@NamedQueries({ @NamedQuery(name ="Jogador.getAll", query = "SELECT j FROM Jogador j WHERE j.nickname = :nickname" )})
+@NamedQueries({ @NamedQuery(name = "Jogador.getAll", query = "SELECT j FROM Jogador j WHERE j.nickname = :nickname") })
 public class Jogador implements Serializable {
-	
+
 	/**
 	 * 
 	 */
@@ -26,12 +25,12 @@ public class Jogador implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
+
 	private String nickname;
 	private String senha;
-		
+
 	@ManyToOne
-	@JoinColumn(name="idPersonagem")
+	@JoinColumn(name = "idPersonagem")
 	private Personagem personagem;
 
 	public Integer getId() {
@@ -65,7 +64,5 @@ public class Jogador implements Serializable {
 	public void setPersonagem(Personagem personagem) {
 		this.personagem = personagem;
 	}
-	
-	
 
 }

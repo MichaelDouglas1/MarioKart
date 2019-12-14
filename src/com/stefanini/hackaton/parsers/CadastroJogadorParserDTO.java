@@ -4,7 +4,7 @@ import com.stefanini.hackaton.dto.CadastroJogadorDto;
 import com.stefanini.hackaton.entities.Jogador;
 import com.stefanini.hackaton.entities.Personagem;
 
-public class CadastroJogadorParserDTO  extends AbstractParser<CadastroJogadorDto, Jogador> {
+public class CadastroJogadorParserDTO extends AbstractParser<CadastroJogadorDto, Jogador> {
 
 	@Override
 	public CadastroJogadorDto toDTO(Jogador entity) {
@@ -20,7 +20,5 @@ public class CadastroJogadorParserDTO  extends AbstractParser<CadastroJogadorDto
 		entity.getPersonagem().setId(dto.getIdPersonagem());
 		return entity;
 	}
-
-	
 
 }

@@ -5,11 +5,11 @@ public class MensagemErro {
 	private String mensagem;
 	private Integer statusCode;
 	private String stack;
-	
+
 	public String getStack() {
 		return stack;
 	}
-	
+
 	public void setStack(String stack) {
 		this.stack = stack;
 	}

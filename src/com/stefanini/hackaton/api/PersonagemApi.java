@@ -22,7 +22,7 @@ public class PersonagemApi {
 	public Response listar() {
 		return Response.ok(personagemService.listar()).build();
 	}
-	
+
 	@GET
 	@Path("/{id}")
 	public Response obter() {

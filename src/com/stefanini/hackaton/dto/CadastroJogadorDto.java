@@ -1,6 +1,5 @@
 package com.stefanini.hackaton.dto;
 
-
 import java.io.Serializable;
 
 public class CadastroJogadorDto implements Serializable {
@@ -11,7 +10,7 @@ public class CadastroJogadorDto implements Serializable {
 	private String senha;
 	private Integer IdPersonagem;
 
-    public String getNickname() {
+	public String getNickname() {
 		return nickname;
 	}
 
@@ -34,6 +33,5 @@ public class CadastroJogadorDto implements Serializable {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	
-	
+
 }

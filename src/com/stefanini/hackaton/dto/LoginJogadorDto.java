@@ -2,16 +2,17 @@ package com.stefanini.hackaton.dto;
 
 import java.io.Serializable;
 
-public class LoginJogadorDto implements Serializable{
+public class LoginJogadorDto implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	private String nickname;
 	private String senha;
-    public String getNickname() {
+
+	public String getNickname() {
 		return nickname;
 	}
 
@@ -26,6 +27,5 @@ public class LoginJogadorDto implements Serializable{
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	
 
 }

@@ -18,27 +18,25 @@ import com.stefanini.hackaton.service.JogadorService;
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class JogadorApi {
-	
+
 	@Inject
 	private JogadorService jogadorService;
-	
+
 	@GET
 	public Response listar() throws NegocioException {
 		return Response.ok(jogadorService.listar()).build();
 	}
-	
+
 	@POST
 	public Response salvar(CadastroJogadorDto jogador) throws NegocioException {
 		jogadorService.cadastrar(jogador);
 		return Response.status(201).build();
 	}
-	
+
 	@POST
 	@Path("/logar")
 	public Response logar(LoginJogadorDto jogador) throws NegocioException {
 		return Response.ok(jogadorService.logar(jogador)).build();
-	}	
-	
-	
+	}
 
 }

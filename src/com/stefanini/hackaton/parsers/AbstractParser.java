@@ -6,6 +6,7 @@ import java.util.List;
 public abstract class AbstractParser<DTO, ENTITY> {
 
 	public abstract DTO toDTO(ENTITY entity);
+
 	public abstract ENTITY toEntity(DTO dto);
 
 	public List<DTO> toDTO(List<ENTITY> entities) {

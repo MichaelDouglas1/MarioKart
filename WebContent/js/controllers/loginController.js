@@ -17,6 +17,8 @@ function loginController($scope, $location ,loginService) {
 	self.logar = function() {		
 		self.service.logar(self.dadosLogin).success(function(data) {
             console.log(data);
+            self.service.jogador = data;
+            $location.path("/corrida");
         }).error(function(data, status) {
             console.log(data);
             self.msg = data.mensagem;
