@@ -1,13 +1,15 @@
 <div ng-controller="CorridaController as corridaCtrl">
 
-<div><h3>Corrida MarioKart</h3></div>
-<hr>
-<buttom class="btn btn-success" ng-click="corridaCtrl.iniciarCorrida()">Iniciar</buttom>
+<buttom class="btn btn-success" ng-click="corridaCtrl.iniciarCorrida()">Iniciar Corrida</buttom>
+<button class="btn btn-info" ><a href="#!/login">Sair</a></button>
+
 
 <div ng-if="corridaCtrl.corridaFinalizou">
 	<hr>
 	<p>{{corridaCtrl.resultado.mensagemResultado}}</p>
 	<p>{{corridaCtrl.checarVitoria()}}</p>
 </div>
+
+<hr>
 
 </div>

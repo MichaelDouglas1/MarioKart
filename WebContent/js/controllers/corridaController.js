@@ -1,16 +1,23 @@
 angular.module("mariokart").controller("CorridaController", CorridaController);
 
-PersonagemController.$inject = [ '$scope', 'CorridaService','loginService' ];
+PersonagemController.$inject = [ '$scope','$location', 'CorridaService','loginService' ];
 
-function CorridaController($scope, CorridaService, loginService) {
+
+
+function CorridaController($scope, $location ,CorridaService, loginService) {
+
+	self.irTelaLogin = function(){
+		$location.path("/login");
+	}
+
+	
 	var vm = this;
 	vm.service = CorridaService;
 	vm.resultado = {};
 	vm.corridaFinalizou = false;
 	vm.jogadorLogado = loginService.jogador;
 	vm.checarVitoria = function (){
-		console.log(vm.jogadorLogado);
-		return vm.resultado.idPersonagem == vm.jogadorLogado.personagem.id ? 'Parabens você venceu' : 'Sinto muito, você perdeu';
+		return vm.resultado.idVencedor == vm.jogadorLogado.personagem.id ? 'Parabens você venceu' : 'Sinto muito, você perdeu';
 	}
 	
 	
@@ -26,4 +33,5 @@ function CorridaController($scope, CorridaService, loginService) {
 			console.log(data);
 		});
 	};
+	
 }
